@@ -1,0 +1,33 @@
+<div >
+  <header>
+
+    <nav >
+       <a routerLink="/login" *ngIf="!isAuthenticated">Login</a>
+      <a href="">Home</a>
+      <li><a (click)="form()" *ngIf="isAuthenticated()">Contact</a></li>
+      <li><a (click)="logout()" *ngIf="isAuthenticated()">Logout</a></li>
+      
+      <!--button *ngIf="isAuthenticated" (click)="logout()">Logout</button-->
+    </nav>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <footer>
+    <p>&copy; 2023 Angular Guards Example</p>
+  </footer>
+</div>
+
+<!--div *ngIf="isAuthenticated()">
+  <nav>
+    <ul>
+      <li><a routerLink="/user-dashboard" routerLinkActive="active">User Dashboard</a></li>
+      <li><a routerLink="/admin-dashboard" routerLinkActive="active">Admin Dashboard</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+</div>
+
+<router-outlet></router-outlet> <footer>
+  <p>&copy; 2023 Angular Guards Example</p>
+</footer-->
